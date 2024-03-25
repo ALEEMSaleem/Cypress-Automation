@@ -23,3 +23,16 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+//Cypress.Commands.overwrite('visit', (originalFn, url, options) => { })
+
+import logInData from '../fixtures/logInCred.json'  
+Cypress.Commands.add('login', () => { 
+    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+        cy.get('input[name="username"]').type(logInData.username)
+        cy.get('input[name="password"]').type(logInData.password)
+        cy.get('button[type="submit"]').click()
+        
+
+ }); 
+ 
