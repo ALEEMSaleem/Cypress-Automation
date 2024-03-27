@@ -9,8 +9,14 @@
 // ***********************************************
 //
 //
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+import loginData from '../fixtures/loginCred.json';
+Cypress.Commands.add('login', () => { 
+    
+    cy.get('input[name="username"]').type(loginData.username);
+    cy.get('input[name="password"]').type(loginData.password);
+    cy.get('button[type="submit"]').click();
+    cy.get('h6').should('have.text', 'Dashboard');
+ })
 //
 //
 // -- This is a child command --
