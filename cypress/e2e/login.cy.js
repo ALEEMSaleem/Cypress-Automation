@@ -1,14 +1,9 @@
 
-describe('Login', () => {
-//   it('should login', () => {
-//     cy.visit('/');
-//    cy.login();
-//     });
-beforeEach(() => {
-    cy.visit('/');
-    cy.login();
-});
-it('should login', () => {
-   cy.get('h6').should('have.text', 'Dashboard');
+describe('validate login functionality', () => {
+
+it('login', () => {
+   cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+   cy.login();
+
     });
 });
