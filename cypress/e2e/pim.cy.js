@@ -1,19 +1,26 @@
+import AddEmployee from "../support/POM/pim.po.js";
+
 
 describe('validate pim features', () => {
-    beforeAll(() => {
-        cy.visit('/');
+    // beforeAll(() => {
+    //     cy.visit('/');
        
-        });
-    beforeEach(() => {
+    //     });
+    // beforeEach(() => {
         
-        cy.login();
-    });
-    afterEach(() => {
+    //     cy.login();
+    // });
+    // afterEach(() => {
         
-        cy.logout();
+    //     cy.logout();
+    // });
+    it('validation of addEmployee', () => {
+        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+        cy.login()
+        cy.AddEmployee();
+        cy.contains('Successfully Saved').should('be.visible');
+        
     });
-    it('addEmployee', () => {
-       
-        });
-    });
+
+});
     
