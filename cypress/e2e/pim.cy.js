@@ -9,6 +9,7 @@ describe("validate pim features", () => {
   afterEach(() => {
     cy.logout();
   });
+  
   it("validation of addEmployee", () => {
     cy.get(Pim.clickOnPimLink()).click();
     cy.get(Pim.clickOnAddEmployeeLink()).click();
@@ -19,4 +20,21 @@ describe("validate pim features", () => {
 
     cy.contains("Successfully Saved").should("be.visible");
   });
+  it("validation of employee list",()=>{  
+    cy.get(Pim.clickOnPimLink()).click();
+    cy.get(Pim.enterEmployeeName()).type(pimData.searchName);
+    cy.get(Pim.clickOnSearchButton()).click();
+    cy.get(Pim.clickOnEditPencil()).eq(0).click();
+    cy.get(Pim.enterLicenseNumber()).type(pimData.licenseNumber);
+    cy.get(Pim.clickOnGender()).click();
+    cy.get(Pim.updateSaveButton()).click();
+
+    cy.contains("Successfully Updated").should("be.visible");
+    
+
+  });
+  // after(() => {
+  //   cy.logout();
+  // });
+
 });

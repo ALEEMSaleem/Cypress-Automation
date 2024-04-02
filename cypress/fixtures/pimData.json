@@ -1,6 +1,8 @@
 
 {
-    "firstName" : "Same",
-    "lastName" : "Michael",
-    "employeeId" : "1234"
+    "firstName" : "Steve",
+    "lastName" : "Smith",
+    "employeeId" : "1234",
+    "searchName" : "Steve Smith",
+    "licenseNumber" : "11223344"
 }
