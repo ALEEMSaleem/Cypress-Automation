@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Focus on cypress",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALEEMSaleem/Cypress-Automation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ALEEMSaleem/Cypress-Automation/issues"
+  },
+  "homepage": "https://github.com/ALEEMSaleem/Cypress-Automation#readme",
+  "dependencies": {
+    "cypress": "^13.7.1"
+  }
+}

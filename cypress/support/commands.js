@@ -17,6 +17,11 @@ Cypress.Commands.add('login', () => {
     cy.get('button[type="submit"]').click();
     cy.get('h6').should('have.text', 'Dashboard');
  })
+ Cypress.Commands.add('logout', () => { 
+    
+    cy.get("span[class='oxd-userdropdown-tab']").click();
+    cy.get(":nth-child(4) > .oxd-userdropdown-link").click();
+ })
 //
 //
 // -- This is a child command --
